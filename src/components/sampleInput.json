@@ -1,0 +1,65 @@
+{
+    "title": "Title",
+    "items": [
+      {
+        "label": "Single String",
+        "id": "singlestring",
+        "type": "single string",
+        "initialValue": "dimash"
+      },
+      {
+        "label": "Multi String",
+        "id": "multistring",
+        "type": "multiple strings",
+        "initialValue": "some long text here"
+      },
+      {
+        "label": "Numeric",
+        "id": "number",
+        "type": "numeric",
+        "initialValue": "19"
+      },
+      {
+        "label": "Date",
+        "id": "date",
+        "type": "date",
+        "initialValue": "2018-07-22"
+      },    
+      {
+        "label": "Checkbox",
+        "id": "logical",
+        "type": "logical",
+        "initialValue": ["one"],
+        "options": [
+          {
+            "value": "one", 
+            "label": "one"
+          }, 
+          {
+            "value": "two", 
+            "label": "two"
+          }
+        ]
+      },
+      {
+        "label": "Radio Button",
+        "id": "enum",
+        "type": "enum",
+        "initialValue": "two",
+        "options": [
+          {
+            "value": "one", 
+            "label": "one"
+          }, 
+          {
+            "value": "two", 
+            "label": "two"
+          }
+        ]
+      }
+    ],
+    "buttons": {
+      "applyButtonLabel": "Apply",
+      "cancelButtonLabel": "Back"
+    }
+  }
