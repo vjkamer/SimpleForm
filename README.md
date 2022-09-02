@@ -1,10 +1,10 @@
 ## Description
 
-This project was built to represent the practical skills working with a serveral forms and data flow between them. Project itself is Single Page Aplication built using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/), which main purpose is to **render UI form** based on user input in valid **JSON** format.
+This project was built to represent the practical skills working with a several forms and data flow between them. Project itself is Single Page Application built using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/), which main purpose is to **render UI form** based on user input in valid **JSON** format.
 
 ## Installation
 
-1. Clone the repository
+1. Clone the repo
 
 ```
 git@github.com:vjkamer/SimpleForm.git
@@ -50,17 +50,17 @@ npm run build
 
 ## Notes
 
-- I've used typescript instead of flow because flow extention for VS Code on my PC didn't run well so I decided to use install create react app with a typescript template to minimize time solving errors with my IDE and concentrate more on a project itself.
+- I've used typescript instead of flow because flow extension for VS Code on my PC didn't run well so I decided to use install create react app with a typescript template to minimize time solving errors with my IDE and concentrate more on a project itself.
 - I've used [formik](https://formik.org/) because I like this library it well maintained and has all the features (helpers) which will save my time while building the project and furthemore while I'm building the really simple forms it can be improved in a future using this library.
-- I've used styled-components because it is just convinient to me. The project is small so there is no big difference using sass or styled component.
+- I've used styled-components because it is just convenient to me. The project is small so there is no big difference using sass or styled component.
 
 ### Potential improvements
 
 I understand that there's a lot of things that should be improved:
 
-- set up husky & lint staged to avoid pushing the bad code.
-- improve json input validation to avoid breaking result form.
-- add validation to the dynamic input fields it is better to show user that his input is not valid while he is typing rather then showing error message on submit.
+- Set up husky & lint staged to analize code for potential errors so usnig this git hooks will be helpful to keep repo clean and produce the quality code.
+- Improve json input validation. This is a must have improvement which will keep the application working with a stricked JSON validation so the result form won't be broken and user will see the more specific error.
+- Add validation to the dynamic input fields it is better to show user that his input is not valid while he is typing so user will see the highlighted message that his input value is not correct.
 
 ### Testing
 
