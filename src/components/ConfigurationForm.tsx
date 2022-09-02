@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-
+import { FormWrapper, Form, TextArea, Title, Text, Button } from "../theme";
 import { AppTabs } from "../App";
 import { Configuration } from "./types";
 
@@ -50,7 +50,8 @@ export function ConfigurationForm({
   };
 
   return (
-    <div>
+    <FormWrapper>
+      <Title>JSON Input Form</Title>
       <Formik
         initialValues={initialValues}
         onSubmit={handleFormSubmit}
@@ -59,20 +60,21 @@ export function ConfigurationForm({
       >
         {({ values, errors, handleChange, handleSubmit }) => {
           return (
-            <form onSubmit={handleSubmit}>
-              <textarea
+            <Form onSubmit={handleSubmit}>
+              <TextArea
                 name="jsonFormConfiguration"
                 value={values.jsonFormConfiguration}
                 onChange={handleChange}
+                rows={20}
               />
               {errors.jsonFormConfiguration && (
-                <p>{errors.jsonFormConfiguration}</p>
+                <Text>{errors.jsonFormConfiguration}</Text>
               )}
-              <button type="submit">Apply</button>
-            </form>
+              <Button type="submit">Apply</Button>
+            </Form>
           );
         }}
       </Formik>
-    </div>
+    </FormWrapper>
   );
 }

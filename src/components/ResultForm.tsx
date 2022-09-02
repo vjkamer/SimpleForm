@@ -1,6 +1,17 @@
 import React from "react";
 import { Formik, FormikValues } from "formik";
 
+import {
+  FormWrapper,
+  Form,
+  TextArea,
+  Input,
+  Title,
+  CancelButton,
+  Label,
+  Box,
+  Button,
+} from "../theme";
 import { AppTabs } from "../App";
 import { Configuration, Item } from "./types";
 
@@ -28,7 +39,7 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
     switch (item.type) {
       case "single string":
         return (
-          <input
+          <Input
             type="text"
             name={item.id}
             id={item.id}
@@ -38,7 +49,7 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
         );
       case "multiple strings":
         return (
-          <textarea
+          <TextArea
             name={item.id}
             id={item.id}
             value={values[item.id]}
@@ -47,7 +58,7 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
         );
       case "numeric":
         return (
-          <input
+          <Input
             type="number"
             name={item.id}
             id={item.id}
@@ -57,8 +68,8 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
         );
       case "logical":
         return item.options.map((option) => (
-          <label key={option.value}>
-            <input
+          <Label key={option.value}>
+            <Input
               type="checkbox"
               name={item.id}
               id={option.value}
@@ -67,12 +78,12 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
               checked={values[item.id].some((o: string) => o === option.value)}
             />
             {option.label}
-          </label>
+          </Label>
         ));
       case "enum":
         return item.options.map((option) => (
-          <label key={option.value}>
-            <input
+          <Label key={option.value}>
+            <Input
               type="radio"
               name={item.id}
               value={option.value}
@@ -80,11 +91,11 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
               checked={option.value === values[item.id]}
             />
             {option.label}
-          </label>
+          </Label>
         ));
       case "date":
         return (
-          <input
+          <Input
             type="date"
             name={item.id}
             id={item.id}
@@ -96,8 +107,8 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
   };
 
   return (
-    <div>
-      {configuration.title && <h1>{configuration.title}</h1>}
+    <FormWrapper>
+      {configuration.title && <Title>{configuration.title}</Title>}
       <Formik
         initialValues={initialValues}
         onSubmit={(values) => {
@@ -106,27 +117,27 @@ export function ResultForm({ configuration, setCurrentTab }: ResultFormProps) {
       >
         {({ values, handleChange, handleSubmit }) => {
           return (
-            <form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit}>
               {configuration.items.map((item) => (
-                <div key={item.id}>
-                  <label htmlFor={item.id}>{item.label}</label>
+                <Box key={item.id}>
+                  <Label htmlFor={item.id}>{item.label}</Label>
                   {renderItemByType(item, values, handleChange)}
-                </div>
+                </Box>
               ))}
-              <button type="submit">
+              <Button type="submit">
                 {configuration.buttons.applyButtonLabel}
-              </button>
-              <button
+              </Button>
+              <CancelButton
                 onClick={() => {
                   setCurrentTab("configurationForm");
                 }}
               >
                 {configuration.buttons.cancelButtonLabel}
-              </button>
-            </form>
+              </CancelButton>
+            </Form>
           );
         }}
       </Formik>
-    </div>
+    </FormWrapper>
   );
 }
