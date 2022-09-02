@@ -1,26 +1,6 @@
 ## Description
 
-Project itself is a Single Page Application built using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/), the main purpose of it is to **render UI form** based on user input in valid **JSON** format. This app consist of 2 forms tabs, the inital form accepts the user valid JSON input (basic validation persist), I am calling it as a _Configuration Form_ because this JSON is a set of rules which is Title, [Inputs](#inputs-table) and Buttons. After submition of valid JSON in Configuration Form tabs will changed and user will see the second form which I'm calling _Result Form_. So in simple words the Second Form is UI representation of First Form Input JSON.
-
-## Installation
-
-1. Clone the repo
-
-```
-git@github.com:vjkamer/SimpleForm.git
-```
-
-or
-
-```
-https://github.com/vjkamer/SimpleForm.git
-```
-
-2. Install NPM packages
-
-```
-npm install
-```
+Project itself is a Single Page Application built using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/), the main purpose of it is to **render UI form** based on user input in valid **JSON** format. This app consist of 2 forms tabs, the inital form accepts the user valid JSON input (basic validation persist), I am calling it as a _Configuration Form_ because this JSON is a set of rules which is Title, Inputs and Buttons. After submition of [valid JSON](./src/components//sampleInput.json) in Configuration Form tabs will changed and user will see the second form which I'm calling _Result Form_. So in simple words the Second Form is UI representation of First Form Input JSON.
 
 ## How to build & run the project
 
@@ -34,7 +14,7 @@ Run the app in the development mode:
 npm start
 ```
 
-If somehow the local server is not opened in a browser but it application is running try to access it through default port:
+Default port:
 
 ```
 http://localhost:3000/
@@ -53,17 +33,6 @@ npm run build
 - I've used typescript instead of flow because flow extension for VS Code on my PC didn't run well so I decided to use install create react app with a typescript template to minimize time solving errors with my IDE and concentrate more on a project itself.
 - I've used [formik](https://formik.org/) because I like this library it well maintained and has all the features (helpers) which will save my time while building the project and furthemore while I'm building the really simple forms it can be improved in a future using this library.
 - I've used styled-components because it is just convenient to me. The project is small so there is no big difference using sass or styled component.
-
-## Inputs Table
-
-| Input Name    | ID           | Label | Type             | Options      | Initial Value         |
-| ------------- | ------------ | ----- | ---------------- | ------------ | --------------------- |
-| single String | singlestring | any   | single string    |              | any                   |
-| multi String  | multistring  | any   | multiple strings |              | any                   |
-| numeric       | numeric      | any   | numeric          |              | any number            |
-| date          | date         | any   | date             |              | dd-mm-yyyy            |
-| logical       | logical      | any   | logical          | label, value | anything from options |
-| enum          | enum         | any   | enum             | label, value | anything from options |
 
 ### Potential improvements
 
