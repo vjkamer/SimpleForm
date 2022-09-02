@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Description
+
+This project is a Signle Page Application, built to prepresent the rendered UI Form based on JSON Input.
+
+## Installation
+
+1. Clone the repo
+2. Install NPM packages
+
+## How to build & run the project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Run
 
-In the project directory, you can run:
+Run the app in the development mode: `npm start`
 
-### `npm start`
+### Build
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Build the app for production: `npm run build`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Notes
 
-### `npm test`
+- I've used typescript instead of flow because flow extention for VS Code on my PC didn't run well si I descided to use install create react app with a typescript template so I do not have to spend time to configure everything.
+- I've used [formik](https://formik.org/) because it is one of the popular open source form library whith a tested solutions for input validation, formatting and error handling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Potential improvements
 
-### `npm run build`
+I understand that there's a lot of things that should be improved:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- set up husky & lint staged
+- improve json input validation
+- add validation to the dynamic input fields
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In order to test the application you can use [sample.json](./src/components//sampleInput.json) file I've created. Simpli copy-paste json into the configuration form and click apply.
+Everything is typed with typescript (shouldn't be hard to migrate to flow if needed). So you can find acceptable Input format in [type.ts](./src/components/types.ts).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I've set up a basic json validation, so you can try to insert invalid json and see the error.
