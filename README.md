@@ -60,7 +60,7 @@ I understand that there's a lot of things that should be improved:
 
 - Set up husky & lint staged it will prevent dev (me) from pushing the bad code into repo so whenever I will try to commit the code git hook will check the commiting files and if there is an errors or some code which is out of configured rules it will prevent dev to push this code to repo. So the repo will be clean and have a better quality code.
 - Improve json input validation. This is a must have improvement which will keep the application working with a stricked JSON validation so the result form won't be broken and user will see the more specific error.
-- Add validation to the dynamic input fields it is better to show user that his input is not valid while he is typing so user will see the highlighted message that his input value is not correct. Also user should have option to make the field required or not.
+- Add validation to the dynamic input fields it is better to show user that his input is not valid while he is typing so user will see the highlighted message that his input value is not correct. Also user can have an option to make the field required or not.
 
 ### Testing
 
