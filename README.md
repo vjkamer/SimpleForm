@@ -1,6 +1,6 @@
 ## Description
 
-This project was built to represent the practical skills working with a several forms and data flow between them. Project itself is Single Page Application built using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/), which main purpose is to **render UI form** based on user input in valid **JSON** format.
+Project itself is a Single Page Application built using [React](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/), which main purpose is to **render UI form** based on user input in valid **JSON** format. This app consist of 2 forms tabs, the inital form is accepts the user JSON input, I am calling it as a _Configuration Form_ because this JSON is a set of rules and based on that the UI of second form (I'm calling it _Result Form_) is rendering.
 
 ## Installation
 
@@ -22,12 +22,6 @@ https://github.com/vjkamer/SimpleForm.git
 npm install
 ```
 
-or
-
-```
-yarn add
-```
-
 ## How to build & run the project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,6 +32,12 @@ Run the app in the development mode:
 
 ```
 npm start
+```
+
+If somehow the local server is not opened in a browser but it application is running try to access it through default port:
+
+```
+http://localhost:3000/
 ```
 
 ### Build
@@ -58,9 +58,9 @@ npm run build
 
 I understand that there's a lot of things that should be improved:
 
-- Set up husky & lint staged to analize code for potential errors so usnig this git hooks will be helpful to keep repo clean and produce the quality code.
+- Set up husky & lint staged it will prevent dev (me) from pushing the bad code into repo so whenever I will try to commit the code git hook will check the commiting files and if there is an errors or some code which is out of configured rules it will prevent dev to push this code to repo. So the repo will be clean and have a better quality code.
 - Improve json input validation. This is a must have improvement which will keep the application working with a stricked JSON validation so the result form won't be broken and user will see the more specific error.
-- Add validation to the dynamic input fields it is better to show user that his input is not valid while he is typing so user will see the highlighted message that his input value is not correct.
+- Add validation to the dynamic input fields it is better to show user that his input is not valid while he is typing so user will see the highlighted message that his input value is not correct. Also user should have option to make the field required or not.
 
 ### Testing
 
