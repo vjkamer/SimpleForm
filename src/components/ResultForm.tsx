@@ -11,7 +11,7 @@ import {
   Label,
   Box,
   Button,
-} from "../theme";
+} from "./form";
 import { AppTabs } from "../App";
 import { Configuration, Item } from "./types";
 

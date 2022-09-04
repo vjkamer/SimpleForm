@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
-import { FormWrapper, Form, TextArea, Title, Text, Button } from "../theme";
+import { FormWrapper, Form, TextArea, Title, Text, Button } from "./form";
 import { AppTabs } from "../App";
 import { Configuration } from "./types";
 
