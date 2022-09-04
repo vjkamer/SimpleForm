@@ -6,6 +6,10 @@ Project itself is a Single Page Application built using [React](https://reactjs.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can check node version in [.nvmrc](./.nvmrc) file.
+
+NPM version: 8.15.0
+
 ### Run
 
 Run the app in the development mode:
